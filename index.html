@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,7 @@
             --blood: #ff003c;
             --depth: #001a33;
         }
-        
+
         body {
             margin: 0;
             padding: 0;
@@ -18,26 +19,26 @@
             background-color: black;
             color: white;
             overflow-x: hidden;
-            background-image: 
+            background-image:
                 radial-gradient(circle at 20% 30%, rgba(0, 120, 255, 0.1) 0%, transparent 30%),
                 url('https://get.wallhere.com/photo/sea-monsters-fantasy-art-sea-creature-underwater-deep-sea-ocean-darkness-computer-wallpaper-232240.jpg');
             background-attachment: fixed;
         }
-        
+
         .container {
             max-width: 900px;
             margin: 0 auto;
             padding: 2rem;
             position: relative;
         }
-        
+
         header {
             text-align: center;
             border-bottom: 1px solid var(--glow);
             padding-bottom: 1rem;
             margin-bottom: 3rem;
         }
-        
+
         h1 {
             font-size: 2.5rem;
             text-transform: uppercase;
@@ -45,17 +46,17 @@
             margin-bottom: 0;
             text-shadow: 0 0 10px var(--glow);
         }
-        
+
         .logo {
             width: 150px;
             filter: drop-shadow(0 0 5px var(--glow));
         }
-        
+
         .tagline {
             font-style: italic;
             opacity: 0.8;
         }
-        
+
         .countdown {
             display: flex;
             justify-content: center;
@@ -63,7 +64,7 @@
             margin: 2rem 0;
             font-size: 1.5rem;
         }
-        
+
         .countdown div {
             background: var(--depth);
             padding: 1rem;
@@ -72,7 +73,7 @@
             min-width: 80px;
             text-align: center;
         }
-        
+
         form {
             background: rgba(0, 10, 30, 0.7);
             padding: 2rem;
@@ -80,8 +81,10 @@
             border-radius: 5px;
             margin-top: 2rem;
         }
-        
-        input, select, textarea {
+
+        input,
+        select,
+        textarea {
             width: 100%;
             padding: 0.5rem;
             margin-bottom: 1rem;
@@ -90,7 +93,7 @@
             color: white;
             font-family: inherit;
         }
-        
+
         button {
             background: var(--blood);
             color: white;
@@ -103,28 +106,33 @@
             letter-spacing: 2px;
             width: 100%;
         }
-        
+
         button:hover {
             background: #ff0044;
             box-shadow: 0 0 15px var(--blood);
         }
-        
+
         .glow {
             animation: pulse 2s infinite alternate;
         }
-        
+
         @keyframes pulse {
-            from { opacity: 0.5; }
-            to { opacity: 1; }
+            from {
+                opacity: 0.5;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
-        
+
         footer {
             text-align: center;
             margin-top: 3rem;
             font-size: 0.8rem;
             opacity: 0.6;
         }
-        
+
         /* Анимация сканирования */
         .scanline {
             position: fixed;
@@ -137,10 +145,15 @@
             animation: scan 8s linear infinite;
             pointer-events: none;
         }
-        
+
         @keyframes scan {
-            0% { top: -10px; }
-            100% { top: 100%; }
+            0% {
+                top: -10px;
+            }
+
+            100% {
+                top: 100%;
+            }
         }
 
         /* Стили для статуса отправки */
@@ -151,15 +164,17 @@
         }
     </style>
 </head>
+
 <body>
     <div class="scanline"></div>
-    
+
     <div class="container">
         <header>
-            <img src="https://sun6-22.userapi.com/s/v1/ig2/lclraR7wfYwnkpQz2Rog01ZwOEP_L20zqYYtd1EzBX66GW5OhNcarfM8Bb-acLDgs5R_i5HG_AJcJnuUbl2T38Il.jpg?size=629x629&quality=95&crop=185,187,629,629&ava=1" alt="Прометей Лэбс" class="logo">
+            <img src="https://sun6-22.userapi.com/s/v1/ig2/lclraR7wfYwnkpQz2Rog01ZwOEP_L20zqYYtd1EzBX66GW5OhNcarfM8Bb-acLDgs5R_i5HG_AJcJnuUbl2T38Il.jpg?size=629x629&quality=95&crop=185,187,629,629&ava=1"
+                alt="Прометей Лэбс" class="logo">
             <h1>Операция "Глубинный Феникс"</h1>
             <p class="tagline">До погружения осталось:</p>
-            
+
             <div class="countdown">
                 <div id="days">00</div>
                 <div>дней</div>
@@ -171,16 +186,17 @@
                 <div>секунд</div>
             </div>
         </header>
-        
+
         <div class="glow">
             <h2>Заявка на участие</h2>
-            <p>Отдел кадров Прометей Лэбс рассматривает кандидатов для сверхсекретной глубоководной миссии. Оставьте свои данные для проверки.</p>
-            
+            <p>Отдел кадров Прометей Лэбс рассматривает кандидатов для сверхсекретной глубоководной миссии. Оставьте
+                свои данные для проверки.</p>
+
             <form id="application">
                 <input type="text" placeholder="ФИО" required id="name">
                 <input type="text" placeholder="SteamID64" required id="steamid">
                 <input type="text" placeholder="Никнейм в дискорде" id="discord">
-                
+
                 <select required id="role">
                     <option value="" disabled selected>Выберите специализацию</option>
                     <option>Сотрудник биологического отдела</option>
@@ -189,71 +205,71 @@
                     <option>Специалист по анализу аномалий</option>
                     <option>Охранник</option>
                 </select>
-                
+
                 <textarea placeholder="Ваша история (по возможности)" id="story"></textarea>
-                
+
                 <label>
-                    <input type="checkbox" required id="agree"> 
+                    <input type="checkbox" required id="agree">
                     Подтверждаю, что ознакомлен с рисками (ст. 7 Договора Прометей-Ω)
                 </label>
-                
+
                 <button type="submit">Отправить в глубины</button>
                 <div id="status"></div>
             </form>
         </div>
-        
+
         <footer>
             <p>© 2007 Прометей Лэбс | Уровень доступа: <span id="access">ОМЕГА</span></p>
             <p id="warning">⚠️ Все данные шифруются протоколом безопасности</p>
         </footer>
     </div>
-    
+
     <script>
         // Таймер с текстовыми подписями
         function updateCountdown() {
-            const eventDate = new Date("2025-08-05T22:00:00").getTime();
+            const eventDate = new Date("2025-10-25T22:00:00").getTime();
             const now = new Date().getTime();
             const diff = eventDate - now;
-            
+
             const days = Math.floor(diff / (1000 * 60 * 60 * 24));
             const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-            
+
             document.getElementById("days").innerText = days.toString().padStart(2, "0");
             document.getElementById("hours").innerText = hours.toString().padStart(2, "0");
             document.getElementById("minutes").innerText = minutes.toString().padStart(2, "0");
             document.getElementById("seconds").innerText = seconds.toString().padStart(2, "0");
-            
+
             // Автоматическое обновление
             if (diff <= 0) {
                 document.querySelector('.tagline').textContent = "ПОГРУЖЕНИЕ НАЧАЛОСЬ";
                 clearInterval(countdownInterval);
             }
         }
-        
+
         const countdownInterval = setInterval(updateCountdown, 1000);
         updateCountdown();
-        
+
         // Рандомный "уровень доступа" для атмосферы
         const accessLevels = ["ОМЕГА", "ДЕДАЛ"];
-        document.getElementById("access").textContent = 
+        document.getElementById("access").textContent =
             accessLevels[Math.floor(Math.random() * accessLevels.length)];
-        
+
         // Мигающее предупреждение
         setInterval(() => {
             const warn = document.getElementById("warning");
             warn.style.opacity = warn.style.opacity === "0.5" ? "1" : "0.5";
         }, 1500);
-        
+
         // Отправка формы в Discord через Webhook
         document.getElementById("application").addEventListener("submit", async (e) => {
             e.preventDefault();
-            
+
             const statusElement = document.getElementById("status");
             statusElement.textContent = "Отправка данных...";
             statusElement.style.color = "var(--glow)";
-            
+
             // Собираем данные формы
             const formData = {
                 name: document.getElementById("name").value,
@@ -263,11 +279,11 @@
                 story: document.getElementById("story").value,
                 timestamp: new Date().toLocaleString()
             };
-            
+
             try {
                 // ВАШ DISCORD WEBHOOK URL (замените на свой)
                 const webhookUrl = "https://discord.com/api/webhooks/1395003364240130111/8__i5wUsYbuswLilxoLVFTcU0O3ja634QwFm01yVxlGQKYWQ_8DYsSfZfbdRL2_Bwu6h";
-                
+
                 // Формируем сообщение для Discord
                 const discordMessage = {
                     username: "Прометей Лэбс - Бот-рекрутер",
@@ -287,7 +303,7 @@
                         }
                     }]
                 };
-                
+
                 // Отправляем запрос
                 const response = await fetch(webhookUrl, {
                     method: "POST",
@@ -296,12 +312,12 @@
                     },
                     body: JSON.stringify(discordMessage)
                 });
-                
+
                 if (response.ok) {
                     statusElement.textContent = "✔️ ЗАЯВКА ПРИНЯТА. Ожидайте контакта.";
                     statusElement.style.color = "var(--glow)";
                     document.getElementById("application").reset();
-                    
+
                     // Показываем всплывающее окно
                     alert("ЗАЯВКА ПРИНЯТА. Ожидайте контакта через анонимные каналы.");
                 } else {
@@ -315,4 +331,5 @@
         });
     </script>
 </body>
+
 </html>
